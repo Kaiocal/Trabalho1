@@ -25,9 +25,8 @@ export default function Pagina1({navigation}) {
             </View>
             <View style={styles.add}>
                 <Text>{item.time}</Text>
-                <FontAwesome5 name="star" size={15} color="black" />
+                <FontAwesome5 name="star" style={item.star ? styles.iconfav : styles.icon} />
             </View>
-
         </View>
     }
 
@@ -70,5 +69,13 @@ const styles = StyleSheet.create({
     },
     fonte: {
         fontWeight: 'bold',
+    },
+    icon: {
+        fontSize: 20,
+        color: 'black',
+    },
+    iconfav: {
+        fontSize: 20,
+        color: 'yellow',
     }
 });
